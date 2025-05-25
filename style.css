@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('hayirlicumalar.png') no-repeat center center/cover;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    animation: slideDown 1s ease forwards;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffe6e6;
+    text-shadow: 0 0 15px #ff4d4d;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #eee;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+.delay {
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
